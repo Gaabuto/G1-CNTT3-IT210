@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout">
+<!--   dish -> DishController -> dishService -> dish.html   -->
+
+<body>
+
+<div layout:fragment="content">
+
+    <h2>Danh sách món ăn</h2>
+
+    <table border="1">
+        <tr>
+            <th>Tên</th>
+            <th>Giá</th>
+        </tr>
+
+        <tr th:each="dish : ${dishes}">
+            <td th:text="${dish.name}"></td>
+            <td th:text="${dish.price}"></td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
