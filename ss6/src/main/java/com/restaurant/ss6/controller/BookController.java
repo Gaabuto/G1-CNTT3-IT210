@@ -19,7 +19,7 @@ public class BookController {
     @GetMapping
     public String home(Model model) {
         model.addAttribute("listBooks", bookService.getBooks());
-        return "list-books";
+        return "menu/list-books";
     }
     @GetMapping("/detail")
     public String details(@RequestParam("id")Integer id, Model model) {
